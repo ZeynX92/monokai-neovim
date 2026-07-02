@@ -1,4 +1,3 @@
---  TODO: Create you own colorscheme
 return {
 	"loctvl842/monokai-pro.nvim",
 	tag = "v1.26.0",
@@ -136,6 +135,9 @@ return {
 
 				-- Split
 				WinSeparator = { fg = c.base.dimmed3, bg = c.base.dark },
+
+				-- self (Python) this/super (cpp)
+				["@variable.builtin"] = { fg = "#BA02BA", italic = true },
 			}
 		end
 		local otherHls = function(c)

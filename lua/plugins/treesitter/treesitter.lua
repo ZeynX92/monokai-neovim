@@ -9,6 +9,8 @@ return {
 		local parsers_to_install = {
 			"lua",
 			"python",
+			"c",
+			"cpp",
 			"javascript",
 			"typescript",
 			"tsx",

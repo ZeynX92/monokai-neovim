@@ -1,9 +1,9 @@
 return {
-	"williamboman/mason.nvim",
+	"mason-org/mason.nvim", -- NOTE: repo moved from williamboman/mason.nvim
 	event = { "BufReadPre", "BufNewFile" },
 	cmd = "Mason",
 	dependencies = {
-		"williamboman/mason-lspconfig.nvim",
+		"mason-org/mason-lspconfig.nvim", -- NOTE: repo moved from williamboman/mason-lspconfig.nvim
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 	},
 
@@ -48,11 +48,17 @@ return {
 				"hyprls",
 				"qmlls",
 				"pyright",
+				"ruff", -- INFO: Python linter/formatter as LSP
+				"clangd", -- INFO: C/C++ LSP
 			},
-			automatic_installation = true,
+			-- NOTE: mason-lspconfig >= 2.0 calls vim.lsp.enable() automatically
+			-- for every server installed above, so a separate vim.lsp.enable({...})
+			-- list (see lsp_config.lua) only needs to additionally enable servers
+			-- that were NOT installed through Mason (e.g. hyprls, qmlls).
+			automatic_enable = true,
 		})
 
-		--  TIP: Formatters
+		--  TIP: Formatters / linters not tied to an LSP server
 		mason_tool_installer.setup({
 			ensure_installed = {
 				"prettier",
@@ -61,7 +67,7 @@ return {
 				"shfmt",
 				"beautysh",
 				"taplo",
-				"ruff",
+				"clang-format", -- INFO: C/C++ formatter (clangd does not format on its own)
 			},
 			run_on_start = true,
 			start_delay = 1000,

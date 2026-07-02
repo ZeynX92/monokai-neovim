@@ -224,7 +224,11 @@ return {
 							{ "[c]", hl = "SnacksDashboardKey" },
 						},
 						key = "c",
-						action = ":lua vim.cmd('cd ~/dotfiles/.config/nvim') vim.cmd('edit ~/dotfiles/.config/nvim/init.lua')",
+						action = function()
+							local config_dir = vim.fn.stdpath("config")
+							vim.cmd("cd " .. vim.fn.fnameescape(config_dir))
+							vim.cmd("edit " .. vim.fn.fnameescape(config_dir .. "/init.lua"))
+						end,
 					},
 					{
 						text = {

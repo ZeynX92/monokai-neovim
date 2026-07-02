@@ -26,7 +26,9 @@ return {
 
 				-- INFO: Other
 				rust = { "rustfmt" },
-				python = { "autoflake" },
+				python = { "ruff_fix", "ruff_format" }, -- INFO: Fix lint issues, then format
+				c = { "clang_format" },
+				cpp = { "clang_format" },
 			},
 
 			format_on_save = {

@@ -28,7 +28,7 @@ vim.opt.title = true -- Allow window title changing
 --  INFO: Neovim UI
 -----------------------------------------------------------
 opt.number = true -- Show line number
-opt.relativenumber = true -- Set relative numbered lines
+opt.relativenumber = false -- Set relative numbered lines
 opt.showmatch = true -- Highlight matching parenthesis
 opt.foldmethod = "marker" -- Enable folding (default 'foldmarker')
 -- opt.colorcolumn = "10" -- Line lenght marker at 80 columns

@@ -27,16 +27,6 @@ return {
 				selection_caret = "  ",
 				path_display = { "smart" },
 				borderchars = { "█", " ", "▀", "█", "█", " ", " ", "▀" },
-				mappings = {
-					i = {
-						["<C-l>"] = "select_default",
-						["<C-j>"] = "move_selection_next",
-						["<C-k>"] = "move_selection_previous",
-					},
-					n = {
-						["<C-l>"] = "select_default",
-					},
-				},
 			},
 			extensions = {
 				fzf = {

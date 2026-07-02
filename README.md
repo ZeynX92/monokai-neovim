@@ -84,6 +84,8 @@ Project picker (I made it to easy hook up to project)
 - bash / zsh
 - hyprland
 - qml
+-python
+- cpp
 
 ### Formatters :
 
@@ -97,6 +99,8 @@ Project picker (I made it to easy hook up to project)
 - rust
 - bash / zsh
 - qml
+- python
+- cpp
 
 ### UI :
 

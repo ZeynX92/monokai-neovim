@@ -1,0 +1,86 @@
+./
+├── assets
+│   ├── icons
+│   │   ├── hyprland.svg
+│   │   └── qml.svg
+│   └── preview
+│       ├── 1.webp
+│       ├── 2.webp
+│       ├── 3.webp
+│       ├── 4.webp
+│       ├── 5.webp
+│       ├── 6.webp
+│       ├── 7.webp
+│       └── 8.webp
+├── init.lua
+├── lazy-lock.json
+├── lazyvim.json
+├── lua
+│   ├── code
+│   │   ├── init.lua
+│   │   ├── keymaps.lua
+│   │   └── options.lua
+│   ├── config
+│   │   ├── autocmds.lua
+│   │   ├── keymaps.lua
+│   │   ├── lazy.lua
+│   │   └── options.lua
+│   └── plugins
+│       ├── autopairs.lua
+│       ├── autotag.lua
+│       ├── avante.lua
+│       ├── bufferline.lua
+│       ├── cmp
+│       │   ├── cmp.lua
+│       │   └── tailwindcss-colorizer.lua
+│       ├── colorizer.lua
+│       ├── confirm-quit.lua
+│       ├── copilot.lua
+│       ├── custom
+│       │   ├── inscom.lua
+│       │   └── projects.lua
+│       ├── devicons.lua
+│       ├── fidget.lua
+│       ├── flash.lua
+│       ├── gitsings.lua
+│       ├── live-server.lua
+│       ├── lorem.lua
+│       ├── lsp
+│       │   ├── conform.lua
+│       │   ├── lsp_config.lua
+│       │   └── mason.lua
+│       ├── lsp-saga.lua
+│       ├── lualine.lua
+│       ├── material-icon.lua
+│       ├── mini.lua
+│       ├── minty.lua
+│       ├── monokai-pro.lua
+│       ├── neoscroll.lua
+│       ├── neotree.lua
+│       ├── noice.lua
+│       ├── notify.lua
+│       ├── nui.lua
+│       ├── number-toggle.lua
+│       ├── obsidian.lua
+│       ├── plenary.lua
+│       ├── real-icons.lua
+│       ├── render-markdown.lua
+│       ├── scrollbar.lua
+│       ├── smear-cursor.lua
+│       ├── snacks.lua
+│       ├── supermaven.lua
+│       ├── telescope.lua
+│       ├── todo-comments.lua
+│       ├── toggler.lua
+│       ├── treesitter
+│       │   ├── treesitter-context.lua
+│       │   ├── treesitter.lua
+│       │   ├── treesitter-textobjects.lua
+│       │   └── treesj.lua
+│       ├── vim-tmux-navigator.lua
+│       ├── which-key.lua
+│       └── yanky.lua
+├── README.md
+└── t.txt
+
+12 directories, 72 files

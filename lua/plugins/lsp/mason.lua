@@ -50,6 +50,7 @@ return {
 				"pyright",
 				"ruff", -- INFO: Python linter/formatter as LSP
 				"clangd", -- INFO: C/C++ LSP
+				"phpactor", -- INFO: PHP LSP
 			},
 			-- NOTE: mason-lspconfig >= 2.0 calls vim.lsp.enable() automatically
 			-- for every server installed above, so a separate vim.lsp.enable({...})
@@ -68,6 +69,7 @@ return {
 				"beautysh",
 				"taplo",
 				"clang-format", -- INFO: C/C++ formatter (clangd does not format on its own)
+				"php-cs-fixer", -- INFO: PHP formatter
 			},
 			run_on_start = true,
 			start_delay = 1000,

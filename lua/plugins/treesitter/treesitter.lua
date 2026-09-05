@@ -18,6 +18,8 @@ return {
 			"html",
 			"css",
 			"scss",
+			"php",
+			"phpdoc",
 			"json",
 			"yaml",
 			"toml",

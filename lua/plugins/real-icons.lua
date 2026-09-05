@@ -8,16 +8,7 @@ return {
 
 	config = function()
 		require("real-icons").setup({
-			pack = "flow",
-
-			packs = {
-				flow = {
-					type = "vscode",
-					path = vim.fn.expand("~/.vscode-oss/extensions/thang-nm.flow-icons-2.0.3-universal"),
-					theme = "flow-dim",
-					license = "personal",
-				},
-			},
+			pack = "material",
 
 			overrides = {
 				extensions = {
@@ -32,7 +23,7 @@ return {
 			},
 
 			integrations = {
-				neo_tree = true,
+				neo_tree = false, -- INFO: kept in sync with lspsaga's winbar, which uses plain nvim-web-devicons
 				bufferline = true,
 				mini_files = true,
 				telescope = true,

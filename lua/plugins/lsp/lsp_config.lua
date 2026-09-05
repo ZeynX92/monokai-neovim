@@ -44,6 +44,7 @@ return {
 					"vue",
 					"javascript",
 					"typescript",
+					"php",
 				},
 				showSuggestionsAsSnippets = true,
 			})

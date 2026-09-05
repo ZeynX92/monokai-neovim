@@ -15,6 +15,9 @@ return {
 				typescriptreact = { "prettierd", "prettier", stop_after_first = true },
 				json = { "prettier" },
 
+				-- INFO: PHP
+				php = { "php_cs_fixer" },
+
 				-- INFO: Config
 				lua = { "stylua" },
 				luau = { "stylua" },

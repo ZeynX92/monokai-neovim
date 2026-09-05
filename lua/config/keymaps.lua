@@ -119,14 +119,10 @@ map.set("n", "x", '"_x', opts) -- Delete single character without copying into r
 -----------------------------------------------------------
 --  INFO: Projects
 -----------------------------------------------------------
---  NOTE: lazy `require` on purpose — this module pulls in `telescope.pickers`,
---  which only exists once lazy.nvim has loaded telescope.nvim. Requiring it
---  at the top of this file (i.e. at config load time) fails with
---  "module 'telescope.pickers' not found" because plugins aren't in the
---  runtimepath yet. Deferring the require until the keymap is actually
---  pressed guarantees telescope is already loaded.
+local projects = require("plugins.custom.projects")
+
 map.set("n", "<leader>p", function()
-	require("plugins.custom.projects").setup() -- Open projects folder
+	projects.setup() -- Open projects folder
 end, { desc = "Projects" })
 
 -----------------------------------------------------------
@@ -156,27 +152,6 @@ end, { desc = "Header 3" })
 --  INFO: Renamer
 -----------------------------------------------------------
 map.set("n", "<leader>r", vim.lsp.buf.rename)
-
------------------------------------------------------------
---  INFO: C/C++ (clangd) — switch between header and source
------------------------------------------------------------
-vim.api.nvim_create_autocmd("LspAttach", {
-	callback = function(args)
-		local client = vim.lsp.get_client_by_id(args.data.client_id)
-		if client and client.name == "clangd" then
-			map.set("n", "<leader>ch", "<Cmd>LspClangdSwitchSourceHeader<CR>", {
-				buffer = args.buf,
-				desc = "Switch Source/Header (C/C++)",
-			})
-		end
-	end,
-})
-
------------------------------------------------------------
--- INFO: Undo and Redo
------------------------------------------------------------
-map.set({ "n", "i" }, "<C-z>", "<cmd>undo<CR>", opts)
-map.set({ "n", "i" }, "<C-y>", "<cmd>redo<CR>", opts)
 
 -----------------------------------------------------------
 --  INFO: Exit "insert" mode

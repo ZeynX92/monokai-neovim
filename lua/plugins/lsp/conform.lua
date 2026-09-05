@@ -26,9 +26,18 @@ return {
 
 				-- INFO: Other
 				rust = { "rustfmt" },
-				python = { "ruff_fix", "ruff_format" }, -- INFO: Fix lint issues, then format
+				python = { "ruff_fix", "autopep8" }, -- INFO: Fix lint issues (imports и т.д.), затем PEP8-форматирование как в PyCharm
 				c = { "clang_format" },
 				cpp = { "clang_format" },
+			},
+
+			formatters = {
+				autopep8 = {
+					prepend_args = { "--max-line-length", "120", "--aggressive", "--aggressive" },
+					-- INFO: max-line-length=120 совпадает с дефолтом PyCharm;
+					-- две --aggressive заставляют autopep8 агрессивнее чинить PEP8-нарушения,
+					-- что ближе к поведению "Reformat Code" в PyCharm
+				},
 			},
 
 			format_on_save = {
